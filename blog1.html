@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Blog1</title>
+        <link id="light" href="blog.css" rel="stylesheet">
+        <link id="dark" href="blog_dark.css" rel="stylesheet" disabled="true">
+
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bitter&family=Dosis&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+
+
+    </head>
+    <body>
+        <div class="top">
+            <button id="toggleButton" onclick="f2()" ><img class='daynight' src="day-and-night.png"></button>
+        </div>
+        <script>
+            document.addEventListener('DOMContentLoaded', (event) => {
+                // Select the button and the stylesheets
+                let toggleButton = document.querySelector('#toggleButton');
+                let lightStylesheet = document.querySelector('#light');
+                let darkStylesheet = document.querySelector('#dark');
+            
+                // Add click event listener to the button
+                toggleButton.addEventListener('click', function f2() {
+                    // Toggle the 'disabled' attribute of the stylesheets
+                    lightStylesheet.disabled = !lightStylesheet.disabled;
+                    darkStylesheet.disabled = !darkStylesheet.disabled;
+                });
+            });
+        </script>
+        <div class="container">
+            <div class="header">
+                <h1>Haikyuu</h1>
+            </div>
+            <div class="content">
+                <p>"Haikyuu!!" is a popular Japanese anime series that revolves around the sport of volleyball. Created by Haruichi Furudate, the story follows Shoyo Hinata, a young and energetic boy inspired by a legendary player known as "The Little Giant." Despite his small stature, Hinata is determined to become a great volleyball player.
+                    <br><br>
+                    The anime showcases Hinata's journey as he enters high school and joins the volleyball team, where he faces various challenges and opponents. Alongside his teammates, including the talented setter Tobio Kageyama, Hinata learns the value of teamwork, perseverance, and self-improvement.
+                    <br><br>
+                    "Haikyuu!!" is praised for its dynamic animation, compelling character development, and intense sports action sequences. It captures the essence of competition and camaraderie, resonating with audiences beyond just sports enthusiasts.
+                    <br><br>
+                    With its engaging storyline and relatable characters, "Haikyuu!!" has gained a large fanbase worldwide and continues to be celebrated as one of the most beloved sports anime of recent years.</p>
+            </div>
+            <div class="footer">
+                <div class="likes">
+                    <button id="like"><img class="likeimg" src="like.png"></button>
+                    <p id="lnum">likes</p>
+                </div>
+                <br>
+                <div class="comments">
+                    <form>
+                        <textarea id="comment" placeholder="Enter New Comment" value=""></textarea>
+                    </form>
+                    <input id="submit" type="submit" value="Add New Comment">
+                    <div class="oldc">
+                        <h4>Previous Comments</h4>
+                        <div id="comment-box"></div>     
+                        <script src="blog1.js"></script>       
+                    </div>
+                </div>
+            </div>
+        </div>    
+    </body>
+</html>

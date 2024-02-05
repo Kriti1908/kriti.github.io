@@ -1,0 +1,488 @@
+:root
+{
+    --clr-dark: #14274e;
+    --clr-light: #e0f4ff;
+}
+
+.dark-mode
+{
+    --clr-dark: #e0f4ff;
+    --clr-light:#14274e;
+}
+
+html
+{
+    scroll-behavior: smooth;
+}
+
+body
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0;
+    background-color: #14274E;
+}
+
+a
+{
+    color: #e0f4ff;
+    text-decoration: none;
+}
+
+@keyframes images
+{
+    0% 
+    {
+        opacity: 1;
+        transform: translate3d(0px,100px,0px);
+    }
+    100% 
+    {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+.animate
+{
+    animation-fill-mode: both;
+    animation-duration: 2000ms;
+    animation-delay: 500ms;
+    animation-iteration-count: 1;
+    opacity: 1;
+    animation-name: images;
+}
+
+button
+{
+    margin-top: 1%;
+    border: none;
+    background-color: #14274E;
+}
+
+.daynight
+{
+    max-height: 50px;
+}
+
+.Navbar
+{
+    flex: 0 1 100%;
+    width: 100%;
+    background-color: #14274E;
+    opacity: 90%;
+    overflow: hidden;
+    font-family: 'Josefin Slab', serif;
+    color: #e0f4ff;
+    font-size: large;
+    position: fixed;
+    align-items: center;
+    padding-bottom: 1%;
+}
+
+.Navbar a, .sidenav a
+{
+    text-decoration: none;
+    color: #e0f4ff;
+}
+
+#divheight
+{
+    height: 5%;
+    flex: 0 1 100%;
+}
+
+.Panels
+{
+    width: 70%;
+    height: 150%;
+    margin: auto;
+    align-content: center;
+    text-align: center;
+    min-height: 50px;
+}
+
+.Panels a
+{
+    margin-left: 5%;
+    margin-right: 5%;
+    padding-top: 10%;
+    padding-bottom: 10%;
+    /*color: white;*/
+    font-size: 100%;
+}
+
+.Panels #mode
+{
+    align: margin-right;
+    padding-left: 23%;
+    font-size: x-large;
+}
+
+.sidenav
+{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    width: 5%;
+    bottom: 0;
+    align-items: flex-end;
+    border-right: 2px solid #e0f4ff;
+}
+
+.sidenav a
+{
+    margin-bottom: 5%;
+    padding-right: 10%;
+    color: #e0f4ff;
+}
+
+.front, .achievements
+{
+    flex: 0 1 100%;
+    display: flex;
+    flex-direction: row;
+    color: #e0f4ff;
+}
+
+.desc
+{
+    flex: 1 0 40%;
+    padding-left: 15%;
+    padding-top: 15%;
+    padding-bottom: 15%;
+    display: block;
+    font-family: 'Barlow', sans-serif;
+    flex-shrink: 1;
+    font-size: large;
+}
+.desc .Name
+{
+    font-family: 'Barlow', sans-serif;
+    font-size: 100px;
+    margin-bottom: 0;
+}
+.image
+{
+    flex: 1 0 60%;
+    padding-left: 0;
+    margin-left: 0;
+    margin-top: 5%;
+    flex-shrink: 1;
+    animation-fill-mode: both;
+    animation-duration: 1000ms;
+    animation-delay: 0ms;
+    animation-iteration-count: 1;
+    opacity: 1;
+    animation-name: images;
+}
+
+.image .image_img
+{
+    max-width: 80%;
+    height: 90%;
+    padding-left: 10%;
+}
+
+.about_me
+{
+    flex: 0 1 100%;
+    display: flex;
+    flex-direction: row;
+    color: #e0f4ff;   
+}
+
+.aboutmetext
+{
+    flex: 1 0 45%;
+    padding-left: 25%;
+    padding-top: 10%;
+    padding-bottom: 15%;
+    display: block;
+    font-family: 'Barlow', sans-serif;
+    flex-shrink: 1;
+    font-size: 125%;
+    text-align: justify;
+}
+
+
+.aboutmetext .Heading
+{
+    text-align: center;
+    margin-bottom: 15%;
+    font-size: 50px;
+}
+
+.Mypic
+{
+    flex: 1 0 55%;
+    padding-top: 15%;
+    padding-left: 0;
+    margin-left: 0;
+    flex-shrink: 1;
+    border-radius: 10px;
+}
+
+.Mypic .Mypic_img
+{
+    max-width: 80%;
+    height: auto;
+    padding-left: 10%;
+    border-radius: 10px;
+}
+
+
+.education, .ach_top, .skills, .blog
+{
+    flex: 0 1 100%;
+    display: flex;
+    flex-direction: row;
+    color: #e0f4ff;   
+}
+
+.edu_image, .sk_image, .blog_image
+{
+    flex: 1 0 55%;
+    padding-top: 5%;
+    padding-left: 0;
+    margin-left: 10%;
+    flex-shrink: 1;
+}
+
+.sk_image
+{
+    max-width: 90%;
+    height: auto;
+}
+
+.edu_image .edu_image_img
+{
+    max-width: 100%;
+    height: auto;
+    padding-left: 10%;
+}
+
+.sk_Name
+{
+    font-family: 'Barlow', sans-serif;
+    font-size: 50px;
+}
+
+
+.edu_desc, .sk_desc
+{
+    flex: 1 0 45%;
+    padding-right: 25%;
+    padding-top: 15%;
+    padding-bottom: 15%;
+    display: block;
+    font-family: 'Barlow', sans-serif;
+    flex-shrink: 1;
+    margin-bottom: 0;
+    font-size: 125%;
+    
+}
+
+.edu_Name, .blog_Name
+{
+    font-family: 'Barlow', sans-serif;
+    font-size: 50px;
+}
+
+.school, .college
+{
+    flex: 0 1 auto;
+    display: flex;
+    flex-direction: row;
+    color: #e0f4ff;   
+}
+
+.school_box, .college_box
+{
+    border-radius: 10px;
+    border: solid 1px #e0f4ff;
+    padding-left: 2%;
+    padding-right: 2%;
+    box-shadow: 5px 5px 5px #e0f4ff;
+    font-size: 100%;
+    text-align: justify;
+    margin-right: 0;
+    margin: 0;
+    
+}
+
+.DPS_Logo, .IIIT_Logo
+{
+    flex: 1 0 50%;
+    padding-top: 20%;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 10%;
+    flex-shrink: 1;
+    border-radius: 10px;
+}
+
+.DPS_Logo
+{
+    padding-top: 22%;
+}
+
+.DPS_Logo .Dps_logo_img, .IIIT_Logo .IIIT_logo_img
+{
+    max-width: 100%;
+    height: auto;
+    padding-left: 0%;
+    border-radius: 10px;
+}
+
+.School_desc, .college_desc
+{
+    flex: 1 0 50%;
+    padding-top: 15%;
+    padding-bottom: 15%;
+    display: block;
+    font-family: 'Barlow', sans-serif;
+    flex-shrink: 1;
+    margin-left: 25%;
+}
+.school
+{
+    padding-top: 2%;
+}
+
+.achievements li, .skills li
+{
+    transition: 0.5s;
+}
+.achievements li:hover, .skills li:hover
+{
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+
+
+.blog1, .blog2
+{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    margin: auto;
+    transition: 0.5s;
+}
+.blog1:hover, .blog2:hover
+{
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+
+.blog1_desc, .blog2_desc
+{
+    margin: auto;
+    flex: 1 0 50%;
+    padding-left: 40%;
+    padding-top: 15%;
+    padding-bottom: 15%;
+    display: block;
+    font-family: 'Barlow', sans-serif;
+    flex-shrink: 1;
+}
+
+.blog2_desc
+{
+    padding-left: 0;
+    padding-right: 40%;
+}
+
+.School_desc .School_head, .college_desc .college_head
+{
+    font-family: 'Barlow', sans-serif;
+    font-size: 50px;
+    margin-bottom: 5%;
+}
+
+.School_desc .school_name, .college_desc .college_name, .blog1_name, .blog2_name
+{
+    font-family: 'Barlow', sans-serif;
+    margin-bottom: 2%;
+}
+.ach_top
+{
+    flex: 0 1 40%;
+    display: flex;
+    flex-direction: column;
+    display: block;
+    font-family: 'Barlow', sans-serif;
+    padding-left: 30%;
+    margin-top: 10%;
+}
+
+.ach_head, .ach_desc
+{
+    flex: 0 1 50%;
+    display: block;
+}
+
+.ach_desc
+{
+    padding-top: 10%;
+    font-size: 130%;
+}
+
+.ach_head
+{
+    text-align: right;
+    padding-right: 10%;
+    font-size: 50px;
+}
+
+.ach_img
+{
+    flex: 0 1 60%;
+    display:block;
+}
+
+.ach_image_img
+{
+    max-width: 80%;
+    height: auto;
+    padding-top: 20%;
+    max-width: 100%;
+}
+
+.blog_desc
+{
+    flex: 1 0 45%;
+    padding-left: 20%;
+    padding-top: 15%;
+    padding-bottom: 15%;
+    display: block;
+    font-family: 'Barlow', sans-serif;
+    flex-shrink: 1;
+    margin-bottom: 0;
+    font-size: 125%;
+}
+
+.blog_image .blog_image_img
+{
+    max-width: 90%;
+    height: auto;
+}
+
+
+.b1c, .b2c
+{
+    border: 2px solid #e0f4ff;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px #e0f4ff;
+    background-color: #183368;
+}
+
+.blog1, .blog2
+{
+    flex: 0 1 40%;
+    display: flex;
+    flex-direction: row;
+    color: #e0f4ff;   
+    text-decoration: none;
+}

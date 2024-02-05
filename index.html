@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Home</title>
+
+        <link id="light" href="index_style_light.css" rel="stylesheet">
+        <link id="dark" href="index_style_dark.css" rel="stylesheet" disabled="true">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Josefin+Slab&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@800&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Barlow&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        
+        <script>history.scrollRestoration = "manual"</script>
+    </head>
+    <body>
+        <!--NAVBAR-->
+        <div id="divheight">
+            <div class="Navbar">
+                <div class="Panels">
+                    <a class="active" href="#about_me">About</a>
+                    <a href="#education">Education</a>
+                    <a href="#achievement">Achievements</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#blog">Blog</a>
+                    <button id="toggleButton" onclick="f1()" ><img class='daynight' src="day-and-night.png"></button>
+                </div>
+            </div>
+        </div>
+        <script>
+            document.addEventListener('DOMContentLoaded', (event) => {
+                // Select the button and the stylesheets
+                let toggleButton = document.querySelector('#toggleButton');
+                let lightStylesheet = document.querySelector('#light');
+                let darkStylesheet = document.querySelector('#dark');
+            
+                // Add click event listener to the button
+                toggleButton.addEventListener('click', function f1() {
+                    // Toggle the 'disabled' attribute of the stylesheets
+                    lightStylesheet.disabled = !lightStylesheet.disabled;
+                    darkStylesheet.disabled = !darkStylesheet.disabled;
+                });
+            });
+        </script>
+        
+
+        <!--SIDENAV-->
+        <div class="sidenav">
+            <a href="https://github.com/Kriti1908" target="_blank"><i class="fa fa-github" style="font-size:24px"></i></a>
+            <a href="https://www.instagram.com/kriti.gupta22/" target="_blank"><i class="fa fa-instagram" style="font-size:24px"></i></a>
+            <a href="https://www.linkedin.com/in/kriti-gupta-b88019287/" target="_blank"><i class="fa fa-linkedin-square" style="font-size:24px"></i></a>
+            <a href="https://www.facebook.com/profile.php?id=100094921556329" target="_blank"><i class="fa fa-facebook-square" style="font-size:24px"></i></a>
+            <a href="mailto: kriti.g@students.iiit.ac.in" target="_blank"><i class="fa fa-envelope" style="font-size:24px"></i></a>
+
+        </div>
+
+        <!--PROFILE AND DESCRIPTION-->
+        <div class="front">
+            
+            <div class="desc">
+                <h1 class="Name">Kriti Gupta</h1>
+                <p>I am a first year undergraduate student at IIIT Hyderabad, majoring in Computer Science and Engineering. 
+                    Scroll down to find out more about me in the About me section!
+                </p>
+                
+            </div>
+            <div class="image"><img class="image_img" src="Pomodoro-technique.png"></div>
+            
+        </div>
+
+
+        <!--ABOUT ME-->
+        <div class="about_me" id="about_me">
+            <div class="aboutmetext">
+                <h1 class="Heading">About Me</h1>
+                <p>
+                    I am a goal driven and down-to-earth person. <br>
+                    I am obsessed with animals, especially cats and dogs.<br>
+                    I love reading books and novels, drawing, painting as well as making origami art. <br>
+                    A perfect day for me would include sleeping for 12 hours, reading for 6 and drawing or messing around for the rest! <br>
+                    I like travelling and exploring new and exciting places. <br>
+                    I get very excited about learning new things and I am always up for a challenge. <br>
+                    
+                </p>   <br><br><br>
+                <a href="Kriti_Gupta_Resume.pdf" target="_blank" alt="resume">Click to view my Resume!</a>     
+            </div>
+            <div class="Mypic"><img class="Mypic_img" src="pfp1.jpg"></div>
+            
+        </div>
+        <script>
+            let target = document.querySelector('.Mypic_img');
+            let observer = new IntersectionObserver(function(entries, observer) {
+                entries.forEach(entry => {
+                    if(entry.isIntersecting) {
+                        entry.target.classList.add('animate');
+                    } else {
+                        entry.target.classList.remove('animate');
+                    }
+                });
+            }, { threshold: 0.5 });
+            observer.observe(target);
+        </script>
+
+        <!--EDUCATION-->
+        <div class="education" id="education">
+            
+            <div class="edu_image"><img id="edu_im" class="image_img" src="Certification.png"></div>
+            <div class="edu_desc">
+                <h1 class="edu_Name">Education</h1>
+                <p>Acquired and Ongoing degrees.</p>
+            </div>            
+        </div>
+        <script>
+            let target2 = document.getElementById('edu_im');
+            let observer2 = new IntersectionObserver(function(entries, observer2) {
+                entries.forEach(entry => {
+                    if(entry.isIntersecting) {
+                        entry.target2.classList.add('animate');
+                    } else {
+                        entry.target2.classList.remove('animate');
+                    }
+                });
+            }, { threshold: 0.5 });
+            observer2.observe(target2);
+        </script>
+
+
+        <!--SCHOOL-->
+        <div class="school">
+            <div class="School_desc">
+                <h1 class="School_head">Schooling</h1>
+                <h1 class="school_name">DPS Bhilai</h1>
+                <div class="school_box"><p>I finished my schooling from Delhi Public School, Bhilai in May 2023.</p></div>
+            </div>            
+            <div class="DPS_Logo"><img class="Dps_logo_img" src="DPS_logo.jpeg"></div>
+        </div>
+
+        <!--COLLEGE-->
+        <div class="college">
+            <div class="college_desc">
+                <h1 class="college_head">College</h1>
+                <h1 class="college_name">IIIT Hyderabad</h1>
+                <div class="college_box"><p>I am currently pursuing a Bachelor's Degree in Computer Science and Engineering from IIIT Hyderabad. </p></div>
+            </div>            
+            <div class="IIIT_Logo"><img class="IIIT_logo_img" src="IIIT_logo.jpeg"></div>
+            
+        </div>
+        <script>
+            let target4 = document.querySelector('.IIIT_logo_img');
+            let observer4 = new IntersectionObserver(function(entries, observer) {
+                entries.forEach(entry => {
+                    if(entry.isIntersecting) {
+                        entry.target.classList.add('animate');
+                    } else {
+                        entry.target.classList.remove('animate');
+                    }
+                });
+            }, { threshold: 0.5 });
+            observer.observe(target);
+        </script>
+
+
+
+        <!--ACHIEVEMENTS-->
+        <div class="achievements" id="achievement">
+            <div class="ach_top">
+                <h1 class="ach_head">Achievements</h1>
+                <div class="ach_desc">
+                    <ul>
+                        <li>SAIL TRT Scholar</li>
+                        <li>Class X Boards: 99.17%</li>
+                        <li>Class XII Boards: 97.6%</li>
+                        <li>JEE Main: 99.77%ile</li>
+                        <li>JEE Advanced: 5441</li>
+                    </ul>                    
+                </div>
+            </div>
+            <div class="ach_img"><img class="ach_image_img" src="Achievement.png"></div>
+        </div>
+
+
+        <!--SKILLS-->
+        <div class="skills" id="skills">
+            
+            <div class="sk_image"><img class="sk_image_img" src="Cybersecurity.png"></div>
+            <div class="sk_desc">
+                <h1 class="sk_Name">Skills</h1>
+                <ul>
+                    <li>C Programming</li>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                    <li>Python</li>
+                    <li>MySQL</li>
+                    <li>Can finish a novel in a day</li>
+                </ul>
+            </div>            
+        </div>
+
+        <!--BLOG-->
+        <div class="blog" id="blog">
+            <div class="blog_desc">
+                <h1 class="blog_Name">Blogs</h1>
+            </div>  
+            <div class="blog_image"><img class="blog_image_img" src="Blogging.png"></div>          
+        </div>
+
+        <!--SCHOOL-->
+        <div class="blog1">
+            <div class="blog1_desc">
+                <div class="b1c">
+                    <a href="blog1.html" target="_blank"><h1 class="blog1_name">Haikyuu</h1></a>
+                    <div class="blog1_box"><p>"Being the best decoy ever is as cool as being the ace."</p></div>
+                </div>  
+            </div>            
+        </div>
+
+        <!--COLLEGE-->
+        <div class="blog2">
+            <div class="blog2_desc">
+                <div class="b2c">
+                    <a href="blog2.html" target="_blank"><h1 class="blog2_name">Six of Crows</h1></a>
+                    <div class="blog2_box"><p>"No Mourners, No Funerals." </p></div>
+                </div>
+            </div>            
+        </div>
+
+    </body>
+</html>
